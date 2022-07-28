@@ -1,0 +1,11 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="bike" class="org.example.vehicle.Bike"></bean>
+    <bean id="car" class="org.example.vehicle.Car"></bean>
+    <bean id="game" class="org.example.game.Game">
+        <constructor-arg ref="bike"/>
+    </bean>
+
+</beans>

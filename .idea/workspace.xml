@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bb055a3-face-4a82-98ce-334d748d6af3" name="Changes" comment="setter injection of instance variable of bean class in xml and class config">
+    <list default="true" id="0bb055a3-face-4a82-98ce-334d748d6af3" name="Changes" comment="mix of constructor initialization and setter initialization">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/ContextConfig2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/config/ContextConfig2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/vehicle/Bike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/vehicle/Bike.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config2.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +81,7 @@
       <option name="presentableId" value="Default" />
       <updated>1658955337890</updated>
       <workItem from="1658955340744" duration="4180000" />
-      <workItem from="1658975797981" duration="4816000" />
+      <workItem from="1658975797981" duration="5602000" />
     </task>
     <task id="LOCAL-00001" summary="Basic Config : new Game(bike()); call bean created by bike() method">
       <created>1658976562164</created>
@@ -126,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658982858502</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="mix of constructor initialization and setter initialization">
+      <created>1658983094143</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1658983094143</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +155,7 @@
     <MESSAGE value="Mix Config Class Base ContextConfig.java import xml base config2.xml and xml base config.xml import class base ContextConfig2.java" />
     <MESSAGE value="Bean Constructor value initialize in different approach in xml configuration" />
     <MESSAGE value="setter injection of instance variable of bean class in xml and class config" />
-    <option name="LAST_COMMIT_MESSAGE" value="setter injection of instance variable of bean class in xml and class config" />
+    <MESSAGE value="mix of constructor initialization and setter initialization" />
+    <option name="LAST_COMMIT_MESSAGE" value="mix of constructor initialization and setter initialization" />
   </component>
 </project>

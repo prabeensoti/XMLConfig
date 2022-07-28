@@ -8,7 +8,7 @@ https://www.springframework.org/schema/beans/spring-beans.xsd">
     </bean>
     <bean id="car" class="org.example.vehicle.Car">
         <constructor-arg index="0" value="2020"/>
-        <constructor-arg index="1" value="Toyota"/>
+        <constructor-arg name="make" value="Toyota"/>
         <constructor-arg index="2" value="Prius"/>
         <constructor-arg index="3" value="55000"/>
     </bean>

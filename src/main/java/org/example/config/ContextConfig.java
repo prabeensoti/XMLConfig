@@ -5,22 +5,15 @@ import org.example.vehicle.Car;
 import org.example.game.Game;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
+import org.springframework.context.annotation.ImportResource;
 
 @Configuration
+@Import(ContextConfig2.class)
 public class ContextConfig {
 
     @Bean
-    public Car car(){
-        return new Car();
-    }
-
-    @Bean
-    public Bike bike(){
-        return new Bike();
-    }
-
-    @Bean
-    public Game game(){
-        return new Game(bike());
+    public Game game(Bike bike){
+        return new Game(bike);
     }
 }

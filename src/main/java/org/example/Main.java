@@ -14,17 +14,17 @@ public class Main {
     }
 
     private static void xmlConfig() {
-        System.out.println("AppStart");
+        System.out.println("App Start");
         ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
         Game game = context.getBean(Game.class);
         game.play();
-        System.out.println("AppEnd");
+        System.out.println("App End");
     }
     private static void classConfig(){
-        System.out.println("AppStart");
+        System.out.println("App Start");
         ApplicationContext context = new AnnotationConfigApplicationContext(ContextConfig.class);
         Game game = context.getBean(Game.class);
         game.play();
-        System.out.println("AppEnd");
+        System.out.println("App End");
     }
 }

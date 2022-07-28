@@ -1,8 +1,12 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-https://www.springframework.org/schema/beans/spring-beans.xsd">
-    <import resource="config2.xml"/>
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+    <context:annotation-config />
+    <bean name="contextConfig2" class="org.example.config.ContextConfig2"></bean>
     <bean id="game" class="org.example.game.Game">
         <constructor-arg ref="bike"/>
     </bean>

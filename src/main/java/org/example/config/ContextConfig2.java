@@ -14,8 +14,7 @@ public class ContextConfig2 {
 
     @Bean
     public Bike bike(){
-        Bike bike = new Bike();
-        bike.setBrand("BMX");
+        Bike bike = new Bike("BMX");
         bike.setTireSize(18);
         return bike;
     }

@@ -4,7 +4,7 @@
 https://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id="bike" class="org.example.vehicle.Bike">
         <property name="tireSize" value="16"/>
-        <property name="brand" value="BMX"/>
+        <constructor-arg name="brand" value="BMX"/>
     </bean>
     <bean id="car" class="org.example.vehicle.Car">
         <constructor-arg index="0" value="2020"/>

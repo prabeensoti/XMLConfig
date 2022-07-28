@@ -5,6 +5,13 @@ public class Bike implements Vehicle{
     private int tireSize;
     private String brand;
 
+    public Bike() {
+    }
+
+    public Bike(String brand) {
+        this.brand = brand;
+    }
+
     public int getTireSize() {
         return tireSize;
     }

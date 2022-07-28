@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 public class ContextConfig2 {
     @Bean
     public Car car(){
-        return new Car();
+        return new Car(2020,"Toyota","Prius",55000);
     }
 
     @Bean

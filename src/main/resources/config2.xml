@@ -3,5 +3,30 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 https://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id="bike" class="org.example.vehicle.Bike"></bean>
-    <bean id="car" class="org.example.vehicle.Car"></bean>
+    <bean id="car" class="org.example.vehicle.Car">
+<!--        Index base -->
+        <constructor-arg index="0" value="2020"/>
+        <constructor-arg index="1" value="Toyota"/>
+        <constructor-arg index="2" value="Prius"/>
+        <constructor-arg index="3" value="55000"/>
+
+<!--        Type base in order-->
+<!--        <constructor-arg type="int" value="2020"/>-->
+<!--        <constructor-arg type="java.lang.String" value="Toyota"/>-->
+<!--        <constructor-arg type="java.lang.String" value="Prius"/>-->
+<!--        <constructor-arg type="int" value="55000"/>        -->
+
+<!--        Misplace order of constructor variable type first int map to first int in constructor second one to second-->
+<!--        Order of same type matter-->
+<!--        <constructor-arg type="java.lang.String" value="Prius"/>-->
+<!--        <constructor-arg type="int" value="2020"/>-->
+<!--        <constructor-arg type="int" value="55000"/>-->
+<!--        <constructor-arg type="java.lang.String" value="Toyota"/>-->
+
+<!--     Partial order or full order was managed by index-->
+<!--        <constructor-arg index="2" type="java.lang.String" value="Prius"/>-->
+<!--        <constructor-arg index="0" type="int" value="2020"/>-->
+<!--        <constructor-arg type="int" value="55000"/>-->
+<!--        <constructor-arg type="java.lang.String" value="Toyota"/>-->
+    </bean>
 </beans>

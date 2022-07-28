@@ -5,10 +5,9 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         https://www.springframework.org/schema/context/spring-context.xsd">
-    <context:annotation-config />
-    <bean name="contextConfig2" class="org.example.config.ContextConfig2"></bean>
+    <import resource="config2.xml"/>
     <bean id="game" class="org.example.game.Game">
-        <constructor-arg ref="bike"/>
+        <constructor-arg ref="car"/>
     </bean>
 
 </beans>

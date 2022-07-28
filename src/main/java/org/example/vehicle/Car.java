@@ -7,6 +7,9 @@ public class Car implements Vehicle{
     private String model;
     private int millage;
 
+    public Car() {
+    }
+
     public Car(int year, String make, String model, int millage) {
         this.year = year;
         this.make = make;

@@ -1,14 +1,14 @@
-package org.example.vehicle;
+package org.example.model.vehicle;
 
-public class Car implements Vehicle{
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
+public class Car implements Vehicle {
 
     private int year;
     private String make;
     private String model;
     private int millage;
-
-    public Car() {
-    }
 
     public Car(int year, String make, String model, int millage) {
         this.year = year;
@@ -20,5 +20,14 @@ public class Car implements Vehicle{
     @Override
     public void move() {
         System.out.println(make+" "+model+" "+year+" has millage "+millage);
+    }
+
+    @PostConstruct
+    private void initMethod(){
+        System.out.println("Car post construct annotation");
+    }
+    @PreDestroy
+    private void destroyMethod(){
+        System.out.println("Car pre destroy annotation");
     }
 }

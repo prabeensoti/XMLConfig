@@ -2,11 +2,11 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 https://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="bike" class="org.example.vehicle.Bike">
+    <bean id="bike" class="org.example.model.vehicle.Bike" init-method="init" destroy-method="destroy">
         <property name="tireSize" value="16"/>
         <constructor-arg name="brand" value="BMX"/>
     </bean>
-    <bean id="car" class="org.example.vehicle.Car">
+    <bean id="car" class="org.example.model.vehicle.Car">
         <constructor-arg index="0" value="2020"/>
         <constructor-arg name="make" value="Toyota"/>
         <constructor-arg index="2" value="Prius"/>

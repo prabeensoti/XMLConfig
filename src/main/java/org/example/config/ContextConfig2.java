@@ -1,7 +1,7 @@
 package org.example.config;
 
-import org.example.vehicle.Bike;
-import org.example.vehicle.Car;
+import org.example.model.vehicle.Bike;
+import org.example.model.vehicle.Car;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -12,7 +12,7 @@ public class ContextConfig2 {
         return new Car(2020,"Toyota","Prius",55000);
     }
 
-    @Bean
+    @Bean(initMethod = "init",destroyMethod = "destroy")
     public Bike bike(){
         Bike bike = new Bike("BMX");
         bike.setTireSize(18);

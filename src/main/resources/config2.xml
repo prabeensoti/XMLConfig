@@ -2,9 +2,17 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 https://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="bike" class="org.example.model.vehicle.Bike" init-method="init" destroy-method="destroy">
+    <bean id="bikeSingleton1" class="org.example.model.vehicle.Bike" scope="singleton" destroy-method="destroy">
+        <property name="tireSize" value="11"/>
+        <property name="brand" value="BMX"/>
+    </bean>
+    <bean id="bikeSingleton2" class="org.example.model.vehicle.Bike" scope="singleton" destroy-method="destroy">
+        <property name="tireSize" value="12"/>
+        <property name="brand" value="BMX"/>
+    </bean>
+    <bean id="bikePrototype" class="org.example.model.vehicle.Bike" scope="prototype" destroy-method="destroy">
         <property name="tireSize" value="16"/>
-        <constructor-arg name="brand" value="BMX"/>
+        <property name="brand" value="BMX"/>
     </bean>
     <bean id="car" class="org.example.model.vehicle.Car">
         <constructor-arg index="0" value="2020"/>

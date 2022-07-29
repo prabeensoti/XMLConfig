@@ -1,14 +1,14 @@
 package org.example.model.vehicle;
 
-public class Bike implements Vehicle{
+import org.springframework.beans.factory.BeanNameAware;
+
+public class Bike implements Vehicle, BeanNameAware {
 
     private int tireSize;
     private String brand;
 
 
-    public Bike(String brand) {
-        System.out.println("Bike Constructor injection");
-        this.brand = brand;
+    public Bike() {
     }
 
     public int getTireSize() {
@@ -32,12 +32,12 @@ public class Bike implements Vehicle{
         System.out.println(brand+" bike with tire size "+tireSize+" moving at speed 10mph");
     }
 
-    //Initialization and Destroy method can't have argument
-    public void init(){
-        System.out.println("Bike Initialization method without interface in config!");
+    @Override
+    public void setBeanName(String s) {
+        System.err.println(s+" bean is created");
     }
 
-    private void destroy() {
-        System.out.println("Bike destroy method without interface in config!");
+    public void destroy(){
+        System.out.println(brand+" with tire size "+tireSize+" is destroy!");
     }
 }

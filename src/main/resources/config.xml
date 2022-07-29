@@ -4,20 +4,15 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
-        https://www.springframework.org/schema/context/spring-context.xsd">
-    <context:annotation-config/>
+        https://www.springframework.org/schema/context/spring-context.xsd"
+        default-lazy-init="true"
+>
+<!--    <context:annotation-config/>-->
     <import resource="config2.xml"/>
-    <bean id="game" class="org.example.model.game.Game" init-method="init" destroy-method="destroyBean">
-        <constructor-arg ref="bike"/>
+    <bean id="game1" class="org.example.model.game.Game" lazy-init="false">
+        <constructor-arg ref="bikeSingleton1"/>
     </bean>
-    <bean id="myBeanPostProcessor" class="org.example.MyBeanPostProcessor"></bean>
-    <bean id="book" class="org.example.model.Book" init-method="init"></bean>
-
-<!--    Order of execution initialization -->
-<!--    1. Independent Bean order of define-->
-<!--    2. BeanPostProcessor run before all-->
-<!--    3. PostConstruct run after initialization-->
-<!--    4. InitializingBean run after PostConstruct annotation-->
-<!--    4. init-method run after InitializingBean-->
-
+    <bean id="game2" class="org.example.model.game.Game" >
+        <constructor-arg ref="bikeSingleton2"/>
+    </bean>
 </beans>

@@ -1,9 +1,8 @@
 package org.example.model.vehicle;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
+import org.springframework.beans.factory.BeanNameAware;
 
-public class Car implements Vehicle {
+public class Car implements Vehicle, BeanNameAware {
 
     private int year;
     private String make;
@@ -22,12 +21,8 @@ public class Car implements Vehicle {
         System.out.println(make+" "+model+" "+year+" has millage "+millage);
     }
 
-    @PostConstruct
-    private void initMethod(){
-        System.out.println("Car post construct annotation");
-    }
-    @PreDestroy
-    private void destroyMethod(){
-        System.out.println("Car pre destroy annotation");
+    @Override
+    public void setBeanName(String s) {
+        System.out.println(s+" is constructed");
     }
 }

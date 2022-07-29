@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bb055a3-face-4a82-98ce-334d748d6af3" name="Changes" comment="bean life cycle &quot;Construction -&gt; Injection -&gt; aware -&gt; initialization -&gt; context -&gt; destroy&quot; &#10;Bean Aware in Book">
+    <list default="true" id="0bb055a3-face-4a82-98ce-334d748d6af3" name="Changes" comment="Bean Scope Singleton and Prototype, Singleton lazy-init true create bean on demand and Prototype is create multiple bean on demand. Singleton is single per context per vm.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/PrototypeDestroyer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MyBeanPostProcessor.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/ContextConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/config/ContextConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/ContextConfig2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/config/ContextConfig2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Book.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/game/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/vehicle/Bike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/vehicle/Bike.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/vehicle/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/vehicle/Car.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config2.xml" afterDir="false" />
     </list>
@@ -33,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="beanLifeCycle" />
+        <entry key="$PROJECT_DIR$" value="beanScope" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -156,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659059925005</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Bean Scope Singleton and Prototype, Singleton lazy-init true create bean on demand and Prototype is create multiple bean on demand. Singleton is single per context per vm.">
+      <created>1659068883802</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1659068883802</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +185,7 @@
     <MESSAGE value="setter injection of instance variable of bean class in xml and class config" />
     <MESSAGE value="mix of constructor initialization and setter initialization" />
     <MESSAGE value="bean life cycle &quot;Construction -&gt; Injection -&gt; aware -&gt; initialization -&gt; context -&gt; destroy&quot; &#10;Bean Aware in Book" />
-    <option name="LAST_COMMIT_MESSAGE" value="bean life cycle &quot;Construction -&gt; Injection -&gt; aware -&gt; initialization -&gt; context -&gt; destroy&quot; &#10;Bean Aware in Book" />
+    <MESSAGE value="Bean Scope Singleton and Prototype, Singleton lazy-init true create bean on demand and Prototype is create multiple bean on demand. Singleton is single per context per vm." />
+    <option name="LAST_COMMIT_MESSAGE" value="Bean Scope Singleton and Prototype, Singleton lazy-init true create bean on demand and Prototype is create multiple bean on demand. Singleton is single per context per vm." />
   </component>
 </project>

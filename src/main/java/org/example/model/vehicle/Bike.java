@@ -1,8 +1,9 @@
 package org.example.model.vehicle;
 
 import org.springframework.beans.factory.BeanNameAware;
+import org.springframework.beans.factory.DisposableBean;
 
-public class Bike implements Vehicle, BeanNameAware {
+public class Bike implements Vehicle, BeanNameAware, DisposableBean {
 
     private int tireSize;
     private String brand;
@@ -37,6 +38,7 @@ public class Bike implements Vehicle, BeanNameAware {
         System.err.println(s+" bean is created");
     }
 
+    @Override
     public void destroy(){
         System.out.println(brand+" with tire size "+tireSize+" is destroy!");
     }

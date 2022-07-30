@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bb055a3-face-4a82-98ce-334d748d6af3" name="Changes" comment="Bean Scope Singleton and Prototype, Singleton lazy-init true create bean on demand and Prototype is create multiple bean on demand. Singleton is single per context per vm.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/PrototypeDestroyer.java" afterDir="false" />
+    <list default="true" id="0bb055a3-face-4a82-98ce-334d748d6af3" name="Changes" comment="Prototype bean is not stored by Spring Application Context so can't call destroy so create solution for that problem">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PrototypeDestroyer.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/ContextConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/config/ContextConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/ContextConfig2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/config/ContextConfig2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/game/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/vehicle/Bike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/vehicle/Bike.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/vehicle/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/vehicle/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/vehicle/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/vehicle/Vehicle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config2.xml" afterDir="false" />
     </list>
@@ -30,7 +33,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="beanScope" />
+        <entry key="$PROJECT_DIR$" value="prototypeDisposible" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -89,6 +92,7 @@
       <updated>1658955337890</updated>
       <workItem from="1658955340744" duration="4180000" />
       <workItem from="1658975797981" duration="5602000" />
+      <workItem from="1659139606661" duration="4583000" />
     </task>
     <task id="LOCAL-00001" summary="Basic Config : new Game(bike()); call bean created by bike() method">
       <created>1658976562164</created>
@@ -160,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659068883802</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Prototype bean is not stored by Spring Application Context so can't call destroy so create solution for that problem">
+      <created>1659070483199</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1659070483199</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,6 +197,7 @@
     <MESSAGE value="mix of constructor initialization and setter initialization" />
     <MESSAGE value="bean life cycle &quot;Construction -&gt; Injection -&gt; aware -&gt; initialization -&gt; context -&gt; destroy&quot; &#10;Bean Aware in Book" />
     <MESSAGE value="Bean Scope Singleton and Prototype, Singleton lazy-init true create bean on demand and Prototype is create multiple bean on demand. Singleton is single per context per vm." />
-    <option name="LAST_COMMIT_MESSAGE" value="Bean Scope Singleton and Prototype, Singleton lazy-init true create bean on demand and Prototype is create multiple bean on demand. Singleton is single per context per vm." />
+    <MESSAGE value="Prototype bean is not stored by Spring Application Context so can't call destroy so create solution for that problem" />
+    <option name="LAST_COMMIT_MESSAGE" value="Prototype bean is not stored by Spring Application Context so can't call destroy so create solution for that problem" />
   </component>
 </project>

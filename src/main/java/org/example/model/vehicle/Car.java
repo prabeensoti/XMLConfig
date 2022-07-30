@@ -2,7 +2,7 @@ package org.example.model.vehicle;
 
 import org.springframework.beans.factory.BeanNameAware;
 
-public class Car implements Vehicle, BeanNameAware {
+public class Car implements Vehicle {
 
     private int year;
     private String make;
@@ -21,8 +21,6 @@ public class Car implements Vehicle, BeanNameAware {
         System.out.println(make+" "+model+" "+year+" has millage "+millage);
     }
 
-    @Override
-    public void setBeanName(String s) {
-        System.out.println(s+" is constructed");
-    }
+
+
 }

@@ -1,32 +1,36 @@
 package org.example.config;
 
-import org.example.PrototypeDestroyer;
 import org.example.model.game.Game;
 import org.example.model.vehicle.Bike;
+import org.example.model.vehicle.Vehicle;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
-import org.springframework.context.annotation.Lazy;
+import org.springframework.context.annotation.Scope;
+
+import java.util.Random;
 
 @Configuration
 @Import(ContextConfig2.class)
-//@Lazy//make all beans lazy
 public class ContextConfig {
 
-//    @Bean
-//    @Lazy(value = false)// male bean not lazy
-//    public Game game1(Bike bikeSingleton1){
-//        return new Game(bikeSingleton1);
-//    }
-//    @Bean
-////    @Lazy// make lazy
-//    public Game game2(Bike bikeSingleton2){
-//        return new Game(bikeSingleton2);
+    @Bean(name = "game")
+    @Scope(value = "singleton")
+    public static Game myGame(){
+        return new Game() {
+            @Override
+            public Vehicle getVehicle1() {
+                return ContextConfig2.bikePrototype();
+            }
+        };
+    }
+
+    // Tight coupling to spring
+//    @Bean(name = "game")
+//    @Scope(value = "singleton")
+//    public static Game myGame(){
+//        return new Game();
 //    }
 
-    @Bean(destroyMethod = "destroy")
-    public PrototypeDestroyer prototypeDestroyer(){
-        return new PrototypeDestroyer();
-    }
 
 }

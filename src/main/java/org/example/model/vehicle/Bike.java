@@ -1,15 +1,17 @@
 package org.example.model.vehicle;
 
-import org.springframework.beans.factory.BeanNameAware;
-import org.springframework.beans.factory.DisposableBean;
-
-public class Bike implements Vehicle, BeanNameAware, DisposableBean {
+public class Bike implements Vehicle{
 
     private int tireSize;
     private String brand;
 
 
     public Bike() {
+    }
+
+    public Bike(int tireSize, String brand) {
+        this.tireSize = tireSize;
+        this.brand = brand;
     }
 
     public int getTireSize() {
@@ -33,13 +35,5 @@ public class Bike implements Vehicle, BeanNameAware, DisposableBean {
         System.out.println(brand+" bike with tire size "+tireSize+" moving at speed 10mph");
     }
 
-    @Override
-    public void setBeanName(String s) {
-        System.err.println(s+" bean is created");
-    }
 
-    @Override
-    public void destroy(){
-        System.out.println(brand+" with tire size "+tireSize+" is destroy!");
-    }
 }

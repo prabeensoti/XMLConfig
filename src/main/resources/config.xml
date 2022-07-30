@@ -5,13 +5,14 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         https://www.springframework.org/schema/context/spring-context.xsd">
-<!--    <context:annotation-config/>-->
+    <context:annotation-config/>
     <import resource="config2.xml"/>
-<!--    Tight Couple to Spring-->
-<!--    <bean id="game" class="org.example.model.game.Game" >-->
-<!--    </bean>    -->
-<!--    Method DI as lookup-method-->
-    <bean id="game" class="org.example.model.game.Game" >
-        <lookup-method name="getVehicle1" bean="bikePrototype"/>
-    </bean>
+<!--    Need setter of variable in game and has same Bean name as variable name-->
+<!--    <bean id="game" class="org.example.model.game.Game" autowire="byName"></bean>-->
+<!--    Need setter of variable in game and has only one Bean of same Type-->
+<!--    <bean id="game" class="org.example.model.game.Game" autowire="byType"></bean>-->
+<!--    Need constructor argument have only one Bean of same Type-->
+<!--    <bean id="game" class="org.example.model.game.Game" autowire="constructor"></bean>-->
+<!--    Annotation base-->
+    <bean id="game" class="org.example.model.game.Game"></bean>
 </beans>

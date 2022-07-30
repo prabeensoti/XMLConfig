@@ -4,18 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bb055a3-face-4a82-98ce-334d748d6af3" name="Changes" comment="Prototype bean is not stored by Spring Application Context so can't call destroy so create solution for that problem">
+    <list default="true" id="0bb055a3-face-4a82-98ce-334d748d6af3" name="Changes" comment="Inject Prototype in Singleton Bean in 3 approach&#10;1: direct new car return&#10;2: implement ApplicationContextAware&#10;3: Method DI abstract method in singleton bean using lookup-method&#10;&lt;lookup-method name=&quot;getVehicle&quot; &#10;bean=&quot;vehicle&quot; /&gt;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PrototypeDestroyer.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/ContextConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/config/ContextConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/ContextConfig2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/config/ContextConfig2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/game/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/vehicle/Bike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/vehicle/Bike.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/vehicle/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/vehicle/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/vehicle/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/vehicle/Vehicle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/HelloControllerTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="prototypeDisposible" />
+        <entry key="$PROJECT_DIR$" value="injectprototypeinsingleton" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -92,7 +89,7 @@
       <updated>1658955337890</updated>
       <workItem from="1658955340744" duration="4180000" />
       <workItem from="1658975797981" duration="5602000" />
-      <workItem from="1659139606661" duration="4583000" />
+      <workItem from="1659139606661" duration="9852000" />
     </task>
     <task id="LOCAL-00001" summary="Basic Config : new Game(bike()); call bean created by bike() method">
       <created>1658976562164</created>
@@ -171,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659070483199</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Inject Prototype in Singleton Bean in 3 approach&#10;1: direct new car return&#10;2: implement ApplicationContextAware&#10;3: Method DI abstract method in singleton bean using lookup-method&#10;&lt;lookup-method name=&quot;getVehicle&quot; &#10;bean=&quot;vehicle&quot; /&gt;">
+      <created>1659150255988</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1659150255989</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,6 +202,7 @@
     <MESSAGE value="bean life cycle &quot;Construction -&gt; Injection -&gt; aware -&gt; initialization -&gt; context -&gt; destroy&quot; &#10;Bean Aware in Book" />
     <MESSAGE value="Bean Scope Singleton and Prototype, Singleton lazy-init true create bean on demand and Prototype is create multiple bean on demand. Singleton is single per context per vm." />
     <MESSAGE value="Prototype bean is not stored by Spring Application Context so can't call destroy so create solution for that problem" />
-    <option name="LAST_COMMIT_MESSAGE" value="Prototype bean is not stored by Spring Application Context so can't call destroy so create solution for that problem" />
+    <MESSAGE value="Inject Prototype in Singleton Bean in 3 approach&#10;1: direct new car return&#10;2: implement ApplicationContextAware&#10;3: Method DI abstract method in singleton bean using lookup-method&#10;&lt;lookup-method name=&quot;getVehicle&quot; &#10;bean=&quot;vehicle&quot; /&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inject Prototype in Singleton Bean in 3 approach&#10;1: direct new car return&#10;2: implement ApplicationContextAware&#10;3: Method DI abstract method in singleton bean using lookup-method&#10;&lt;lookup-method name=&quot;getVehicle&quot; &#10;bean=&quot;vehicle&quot; /&gt;" />
   </component>
 </project>

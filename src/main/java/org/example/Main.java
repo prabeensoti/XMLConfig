@@ -9,23 +9,17 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
     public static void main(String[] args) {
-        xmlConfig();
-//        classConfig();
+//        xmlConfig();
+        classConfig();
     }
 
     private static void xmlConfig() {
         System.out.println("App Start");
         AbstractApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
-
-//        Game game = context.getBean("game", Game.class);
-//        System.out.println(game.getVehicle());
-//        Game game1 = context.getBean("game", Game.class);
-//        System.out.println(game1.getVehicle());
         Game game = context.getBean("game", Game.class);
-        System.out.println(game.getVehicle1());
-        Game game1 = context.getBean("game", Game.class);
-        System.out.println(game1.getVehicle1());
-
+        game.play();
+        // Annotation
+        game.vehiclePlay();
         context.close();
         System.out.println("App End");
     }
@@ -35,8 +29,8 @@ public class Main {
 
         Game game = context.getBean("game", Game.class);
         game.play();
-        Game game1 = context.getBean("game", Game.class);
-        game1.play();
+        // Annotation
+        game.vehiclePlay();
 
         context.close();
         System.out.println("App End");

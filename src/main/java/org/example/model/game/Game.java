@@ -1,37 +1,56 @@
 package org.example.model.game;
 
 import org.example.model.vehicle.Bike;
+import org.example.model.vehicle.Car;
 import org.example.model.vehicle.Vehicle;
-import org.springframework.beans.BeansException;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.ApplicationContextAware;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
-//Tight couple to spring
-//public class Game implements ApplicationContextAware {
-public abstract class Game{
-    private ApplicationContext applicationContext;
+public class Game{
+    private Car car;
+    private Bike bike;
 
+    // Annotation use field injection
+    // bean Id must match to variable name
+    // use qualifier to match bean Id
+    @Autowired
+    @Qualifier("vehicle1")
+    private Vehicle vehicle;
     public Game() {
     }
-    public void play() {
-        getVehicle1().move();
+
+//    Constructor autowire
+//    If required false we don't need any bean of arguments
+    @Autowired(required = false)
+    public Game(Car car,@Qualifier("bike1") Bike bike) {
+        this.car = car;
+        this.bike = bike;
     }
 
-    //P2C approach Tight coupling
-//    public Vehicle getVehicle() {
-//        this.vehicle=new Bike(23,"Hero");
-//        return vehicle;
-//    }
+    public void play() {
+        System.err.println("Game Start");
+        car.move();
+        bike.move();
+        System.err.println("Game End");
+    }
 
-    //Tightly couple to spring
-//    public Vehicle getVehicle() {
-//        return applicationContext.getBean(Bike.class);
-//    }
-//
-//    @Override
-//    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-//        this.applicationContext = applicationContext;
-//    }
+    public void vehiclePlay(){
+        vehicle.move();
+    }
 
-    abstract public Vehicle getVehicle1();
+    public Car getCar() {
+        return car;
+    }
+
+    public void setCar(Car car) {
+        this.car = car;
+    }
+
+    public Bike getBike() {
+        return bike;
+    }
+
+    public void setBike(Bike bike) {
+        this.bike = bike;
+    }
 }

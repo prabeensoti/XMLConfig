@@ -4,14 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bb055a3-face-4a82-98ce-334d748d6af3" name="Changes" comment="autowire by field, constructor, default-autowire-candidate, autowire-candidate, Qualifier, Autowire">
+    <list default="true" id="0bb055a3-face-4a82-98ce-334d748d6af3" name="Changes" comment="multiprofile context &#10;VMOptions&#10;-Dspring.profiles.active=production">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/aspects/LogBeforeAndAfter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/config/SpringConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/DatabaseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/EmailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/ContextConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/config/ContextConfigProd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/ContextConfig2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/config/ContextConfigDev.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/game/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config_prod.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config_dev.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/ContextConfigDev.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/ContextConfigProd.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/game/Game.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/vehicle/Bike.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/vehicle/Car.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/vehicle/Vehicle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config_dev.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config_prod.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,15 +29,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="autowire" />
+        <entry key="$PROJECT_DIR$" value="profile" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -89,7 +97,8 @@
       <updated>1658955337890</updated>
       <workItem from="1658955340744" duration="4180000" />
       <workItem from="1658975797981" duration="5602000" />
-      <workItem from="1659139606661" duration="11201000" />
+      <workItem from="1659139606661" duration="11424000" />
+      <workItem from="1659233868765" duration="6612000" />
     </task>
     <task id="LOCAL-00001" summary="Basic Config : new Game(bike()); call bean created by bike() method">
       <created>1658976562164</created>
@@ -182,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659154925098</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="multiprofile context &#10;VMOptions&#10;-Dspring.profiles.active=production">
+      <created>1659156174311</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1659156174311</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,6 +227,7 @@
     <MESSAGE value="Prototype bean is not stored by Spring Application Context so can't call destroy so create solution for that problem" />
     <MESSAGE value="Inject Prototype in Singleton Bean in 3 approach&#10;1: direct new car return&#10;2: implement ApplicationContextAware&#10;3: Method DI abstract method in singleton bean using lookup-method&#10;&lt;lookup-method name=&quot;getVehicle&quot; &#10;bean=&quot;vehicle&quot; /&gt;" />
     <MESSAGE value="autowire by field, constructor, default-autowire-candidate, autowire-candidate, Qualifier, Autowire" />
-    <option name="LAST_COMMIT_MESSAGE" value="autowire by field, constructor, default-autowire-candidate, autowire-candidate, Qualifier, Autowire" />
+    <MESSAGE value="multiprofile context &#10;VMOptions&#10;-Dspring.profiles.active=production" />
+    <option name="LAST_COMMIT_MESSAGE" value="multiprofile context &#10;VMOptions&#10;-Dspring.profiles.active=production" />
   </component>
 </project>

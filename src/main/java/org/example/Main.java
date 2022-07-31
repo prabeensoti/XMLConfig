@@ -1,36 +1,35 @@
 package org.example;
 
 
-import org.example.model.game.Game;
+
+import org.example.config.SpringConfig;
+import org.example.model.DatabaseService;
+import org.example.model.EmailService;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
 public class Main {
     public static void main(String[] args) {
         xmlConfig();
-//        classConfig();
+        classConfig();
     }
 
     private static void xmlConfig() {
-        System.out.println("App Start");
-        GenericXmlApplicationContext context = new GenericXmlApplicationContext();
-//        context.getEnvironment().setActiveProfiles("development");
-        context.load("config_*.xml");
-        context.refresh();
-        Game game = context.getBean("game", Game.class);
-        game.play();
+        System.out.println("App Start XML");
+        AbstractApplicationContext context = new GenericXmlApplicationContext("config.xml");
+        EmailService emailService = (EmailService) context.getBean("emailServiceProxy");
+        emailService.sendEmail();
         context.close();
-        System.out.println("App End");
+        System.out.println("App End XML");
     }
     private static void classConfig(){
-        System.out.println("App Start");
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
-//        context.getEnvironment().setActiveProfiles("development");
-        context.scan("org.example.config");
-        context.refresh();
-        Game game = context.getBean("game", Game.class);
-        game.play();
+        System.out.println("App Start Class");
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
+        DatabaseService databaseService = context.getBean("databaseServiceProxy", DatabaseService.class);
+        databaseService.connect();
         context.close();
-        System.out.println("App End");
+        System.out.println("App End Class");
     }
 }

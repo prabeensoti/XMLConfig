@@ -1,0 +1,23 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       https://www.springframework.org/schema/context/spring-context.xsd">
+    <bean id="emailService" class="org.example.model.EmailService" >
+        <constructor-arg name="email" value="prabeen.soti@miu.edu"/>
+    </bean>
+    <bean id="databaseService" class="org.example.model.DatabaseService" >
+        <property name="dbUrl" value="mysql://localhost:3306"/>
+    </bean>
+    <bean id="logAspect" class="org.example.aspects.LogBeforeAndAfter" ></bean>
+    <bean id="emailServiceProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target" ref="emailService"/>
+        <property name="interceptorNames" >
+            <list>
+                <value>logAspect</value>
+            </list>
+        </property>
+    </bean>
+</beans>

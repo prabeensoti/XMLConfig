@@ -10,6 +10,7 @@ public class EmailService{
 
     public void sendEmail(){
         System.out.println("Email send to "+email);
+        if (Math.random() > 0.5) throw new NullPointerException();
     }
 
 

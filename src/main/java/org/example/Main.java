@@ -19,15 +19,18 @@ public class Main {
     private static void xmlConfig() {
         System.out.println("App Start XML");
         AbstractApplicationContext context = new GenericXmlApplicationContext("config.xml");
-        EmailService emailService = (EmailService) context.getBean("emailServiceProxy");
-        emailService.sendEmail();
+        EmailService emailService = context.getBean("emailService", EmailService.class);
+        try {
+            emailService.sendEmail();
+        }catch (Exception e){
+        }
         context.close();
         System.out.println("App End XML");
     }
     private static void classConfig(){
         System.out.println("App Start Class");
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
-        DatabaseService databaseService = context.getBean("databaseServiceProxy", DatabaseService.class);
+        DatabaseService databaseService = context.getBean("databaseService", DatabaseService.class);
         databaseService.connect();
         context.close();
         System.out.println("App End Class");
